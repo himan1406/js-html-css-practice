@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+      background: black;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      font-family: 'Poppins', sans-serif;
+    }
+
+body.loaded {
+    opacity: 1;
+}  
+  
+    .main-container {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      padding-left: 40px;
+    }
+
+    .clock {
+      width: 300px;
+      height: 300px;
+      border: 12px solid #f7f0f0;
+      border-radius: 200px;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .clock-face {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateY(-3px);
+    }
+
+    .hand {
+      width: 50%;
+      background: white;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: ease-in-out;
+    }
+
+    .second-hand {
+         height: 2px; 
+    }
+    .minute-hand { 
+        height: 4px; 
+    }
+    .hour-hand {
+         height: 6px; width: 50%; background: white; 
+    }
+
+    .center-panel {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .header-and-timer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .header-text {
+      color: white;
+      font-family: poppins;
+      font-weight: bold;
+      font-size: 45px;
+      margin-left: 80px;
+    }
+
+    .timer-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-left: 80px;
+    }
+
+    .circle-timer {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .progress-ring {
+      transform: rotate(-90deg);
+    }
+
+    .progress-ring-bg,
+    .progress-ring-circle {
+      fill: none;
+      stroke-width: 10;
+      cx: 100;
+      cy: 100;
+      r: 90;
+    }
+
+    .progress-ring-bg { stroke: #444; }
+    .progress-ring-circle {
+      stroke: #ffffff;
+      stroke-dasharray: 565.48;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear;
+    }
+
+    .time-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      color: white;
+    }
+
+    .timer-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .timer-inputs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      filter: invert(1);
+      background-color: white;
+      color: black;
+    }
+
+    .timer-inputs input {
+      width: 60px;
+      padding: 8px;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: white;
+      color: black;
+    }
+
+    .timer-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .timer-buttons button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      background: white;
+      color: black;
+      border-width: 1px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .timer-buttons button:hover {
+      background: #000000;
+      color: rgb(255, 255, 255);
+      border-color: white solid;
+      border-width: 1px;
+    }

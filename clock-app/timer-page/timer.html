@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Timer</title>
+  <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+    <div class="center-panel">
+      <div class="header-and-timer">
+        <div class="header-text">SET TIMER</div>
+
+        <div class="timer-section">
+          <div class="circle-timer">
+            <svg class="progress-ring" width="200" height="200">
+              <circle class="progress-ring-bg" cx="100" cy="100" r="90" />
+              <circle class="progress-ring-circle" cx="100" cy="100" r="90" />
+            </svg>
+            <div class="time-text">00:00:00</div>
+          </div>
+
+          <div class="timer-controls">
+            <div class="timer-inputs">
+              <input type="number" class="hours-input" placeholder="Hr" min="0">
+              <input type="number" class="minutes-input" placeholder="Min" min="0">
+              <input type="number" class="seconds-input" placeholder="Sec" min="0" max="59">
+            </div>
+            <div class="timer-buttons">
+              <button class="start-button">Start</button>
+              <button class="pause-button" style="display:none">Pause</button>
+              <button class="resume-button" style="display:none">Resume</button>
+              <button class="reset-button" style="display:none">Reset</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <audio id="alarm-audio" src="../alarm-page/alarm-tone.mp3" preload="auto"></audio>
+  <script src="timer.js" type="module"></script>
+</body>
+</html>

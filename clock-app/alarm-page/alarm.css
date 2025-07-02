@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background: black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border: 12px solid #f7f0f0;
+    border-radius: 200px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+    margin-left: 40px;
+}
+
+.clock-face{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateY(-3px);
+}
+
+.hand{
+    width: 50%;
+    background: white;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: ease-in-out;
+}
+
+.second-hand{
+    height: 2px;
+    background: white;
+}
+
+.minute-hand {
+    height: 4px;
+    background: white;
+}
+
+.hour-hand {
+    height: 6px;
+    width: 50%;
+    background: white; 
+}
+
+.header-text{
+    color: white;
+    margin-left: 100px;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 45px;
+    margin-bottom: 65px;
+}
+
+.alarm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+  gap: 20px; 
+}
+
+
+.alarm-grid {
+    display: grid;
+    grid-template-columns: 250px 150px;
+    column-gap: 10px;
+    row-gap: 20px;
+    align-items: stretch;
+    margin-left: 80px;
+}
+
+.alarm-time {
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 5px;
+    border-width: 1px;
+    background: transparent;
+    filter: invert(1);
+    border: 1px solid;
+}
+
+.set-alarm {
+    width: 100px;
+    height: 43px;
+    font-family: poppins;
+    font-weight: bold;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.set-alarm:hover{
+    background-color: white;
+    color: black;
+    border-color:white ;
+}
+
+.alarm-list {
+    display: grid;
+    grid-template-columns: 250px 150px;
+    column-gap: 10px;
+    row-gap: 20px;
+    align-items: stretch;
+    margin-left: 80px;
+}
+
+.delete-alarm-button{
+    width: 100px;
+    height: 45px;
+    font-family: poppins;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.delete-alarm-button:hover {
+    background: transparent;
+    color: white;
+}
+
+.time-list-item {
+    color: white;
+    font-weight: bold;
+    font-family: poppins;
+    font-size: 20px;
+    padding-top: 8px;
+}
